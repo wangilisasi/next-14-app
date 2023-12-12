@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 
 export default async function DynamicPage(){
-    const response = await fetch(process.env.BASE_URL+"photos/random?client_id="+process.env.UNSPLASH_ACCESS_KEY,
+    const response = await fetch("https://api.unsplash.com/photos/random?client_id="+process.env.UNSPLASH_ACCESS_KEY,
     {
        // cache:"no-cache/no-store"
        //next:{revalidate:0}

@@ -8,7 +8,7 @@ interface PageProps{
 }
 
 async function getUser(username:string):Promise<UnsplashUser>{
-    const response = await fetch(process.env.BASE_URL+`/users/${username}?client_id=${process.env.UNSPLASH_ACCESS_KEY
+    const response = await fetch(`https://api.unsplash.com/users/${username}?client_id=${process.env.UNSPLASH_ACCESS_KEY
     }`)
 
     if(response.status===404){
