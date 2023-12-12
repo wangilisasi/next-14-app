@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default async function StaticPage(){    //we make it async coz we fetch data
     
-    const response = await fetch(process.env.BASE_URL+"photos/random?client_id="+process.env.UNSPLASH_ACCESS_KEY);
+    const response = await fetch("https://api.unsplash.com/photos/random?client_id="+process.env.UNSPLASH_ACCESS_KEY);
     const image: UnsplashImage = await response.json();
 
     const width = Math.min(500, image.width);
